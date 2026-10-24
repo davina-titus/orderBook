@@ -32,8 +32,8 @@ LIMIT #6 B 250 @ 100.50
 - **Validation:** rejects duplicate live ids, non-positive quantities and
   prices, and malformed price strings
 
-## Features
-live Demo https://courageous-frangollo-012c00.netlify.app/
+## Live Demo 
+https://courageous-frangollo-012c00.netlify.app/
 
 ## Performance
 
