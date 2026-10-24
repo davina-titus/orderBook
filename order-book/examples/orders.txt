@@ -1,0 +1,30 @@
+# A short session showing resting orders, time priority, partial fills,
+# walking the book, IOC, cancels and reduces.
+
+# Build up both sides of the book
+LIMIT 1 S 101.00 300
+LIMIT 2 S 100.50 200
+LIMIT 3 S 100.50 100     # same price as #2, queued behind it
+LIMIT 4 B 99.75  400
+LIMIT 5 B 100.00 250
+PRINT
+
+# Aggressive buy crosses the spread: fills all of #2 first (time
+# priority), then 50 of #3 at the same price
+LIMIT 6 B 100.50 250
+PRINT
+
+# Market sell walks down the bids
+MARKET 7 S 400
+
+# IOC buy takes what it can at <= 101.00 and cancels the rest
+IOC 8 B 101.00 500
+PRINT
+
+# Manage resting orders
+LIMIT 9  B 99.90 300
+LIMIT 10 S 100.80 150
+REDUCE 9 100
+CANCEL 4
+CANCEL 42                # unknown id
+PRINT
