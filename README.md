@@ -10,7 +10,7 @@ LIMIT #6 B 250 @ 100.50
   TRADE      50 @ 100.50   buy #6  sell #3  (aggressor: BUY)
   +------------- BOOK -------------
   | ASK    101.00       300   1 order
-  | ASK    100.50        50   1 order
+  | ASK    100.50        50   1 order 
   |   ----- spread 0.50 -----
   | BID    100.00       250   1 order
   | BID     99.75       400   1 order
